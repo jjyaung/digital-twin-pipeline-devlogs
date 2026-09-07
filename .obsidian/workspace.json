@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9e27b4a8a88599f5",
+        "id": "19b3622c77bec2a5",
         "type": "tabs",
         "children": [
           {
-            "id": "71fe009fcf3ec5e0",
+            "id": "718523bedb6c3e0d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:daily-log",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -188,9 +188,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "71fe009fcf3ec5e0",
+  "active": "718523bedb6c3e0d",
   "lastOpenFiles": [
+    "Day-001.md",
     "Daily-Pipeline-Log.md",
+    "doc/Index.md",
     "Unconfirmed 941846.crdownload",
     "requirements.txt",
     "requirement.txt",
@@ -200,7 +202,6 @@
     "doc/assets/image",
     "doc/assets",
     "doc/asset/image",
-    "doc/asset",
-    "doc/Index.md"
+    "doc/asset"
   ]
 }

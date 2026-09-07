@@ -1,0 +1,77 @@
+# 網站基本資訊
+site_name: "168 Days of Pipeline Engineering"
+site_description: "從 Blender 建模到 OpenUSD 數位孿生管線的技術挑戰日誌"
+site_author: "Kuan-Yao Tseng"
+site_url: "https://<您的-github-帳號>.github.io/<您的-專案名稱>/"
+
+# 主題與 UX 設定
+theme:
+  name: material
+  # 自訂主題色彩
+  palette:
+    # 亮色模式設定 (預設)
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: 切換至暗色模式
+    # 暗色模式設定 (適合技術開發者的閱讀體驗)
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: 切換至亮色模式
+  # 導覽列與介面功能 (體現資訊架構)
+  features:
+    - navigation.tabs           # 啟用頂部導覽頁籤，降低左側選單的複雜度
+    - navigation.tabs.sticky    # 頂部頁籤固定，方便長篇文件尋路
+    - navigation.sections       # 側邊欄分類展開
+    - navigation.top            # 啟用「回到頂部」按鈕
+    - search.suggest            # 啟用搜尋建議
+    - search.highlight          # 搜尋結果高亮
+    - content.code.copy         # 程式碼區塊右上角加入「複製」按鈕
+
+# 網站導覽架構 (Milestones & Daily Logs)
+nav:
+  - 專案總覽: 
+    - 挑戰宣言與架構: index.md
+    - 開發環境與硬體驗證: setup.md
+  - 第一階段：Blender 建模:
+    - Week 01-04 總結: phase1/index.md
+    - 日常紀錄 (Day 001-028): phase1/daily-logs.md
+  - 第二階段：OpenUSD 管線整合:
+    - Week 05-08 總結: phase2/index.md
+    - 日常紀錄 (Day 029-056): phase2/daily-logs.md
+  - 第三階段：Unity 引擎拋轉:
+    - Week 09-12 總結: phase3/index.md
+    - 日常紀錄 (Day 057-084): phase3/daily-logs.md
+  - 技術資產庫:
+    - Python 自動化腳本: assets/scripts.md
+    - USD 節點架構圖: assets/usd-architecture.md
+  - 關於作者: about.md
+
+# Markdown 擴充功能 (技術文件核心)
+markdown_extensions:
+  - admonition                # 支援警告、提示等區塊 (e.g., !!! note, !!! warning)
+  - toc:
+      permalink: true         # 在標題旁加入錨點連結，方便分享特定段落
+  - pymdownx.details          # 支援可折疊的內容區塊 (適合隱藏過長的終端機 log)
+  - pymdownx.highlight:       # 程式碼高亮 (非常適合 Python, C++, JSON, USD ascii)
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite     # 支援行內程式碼高亮
+  - pymdownx.snippets         # 允許在 Markdown 中直接嵌入外部原始碼檔案
+  - pymdownx.superfences:     # 支援複雜的程式碼區塊與 Mermaid 流程圖 (繪製管線架構必備)
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:          # 啟用 Content Tabs (並排展示程式碼與 3D 渲染圖)
+      alternate_style: true
+  - pymdownx.tasklist:        # 支援待辦事項清單 (追蹤每日 1.5 小時的精準打擊任務)
+      custom_checkbox: true

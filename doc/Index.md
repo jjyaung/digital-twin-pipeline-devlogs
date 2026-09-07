@@ -1,5 +1,5 @@
 ---
-title: 168 天數位孿生 USD 管線工程挑戰儀表板
+title: 168 days digital twin USD Pipeline Challenge Dashboard
 layout: default
 ---
 
